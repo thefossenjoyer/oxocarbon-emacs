@@ -43,6 +43,9 @@
     (font-lock-function-name-face (:foreground oxocarbon-base08)) ;; function names
     (font-lock-preprocessor-face (:foreground oxocarbon-base09))
     (font-lock-doc-face (:foreground oxocarbon-base14))
+    
+    (corfu-current (:background oxocarbon-base02 :foreground oxocarbon-base08))
+    
     ;;(font-lock-operator-face (:foreground nightfox-green))
     ;; END ;;
 
@@ -54,41 +57,18 @@
 
     ;; UI ;;
     (region (:background oxocarbon-base02)) ;; selction background
-    (highlight (:background oxocarbon-base02))
+    (highlight (:background oxocarbon-base02)) ;; highlight when hovering over a link etc.
 
     (mode-line (:foreground oxocarbon-fg :background oxocarbon-bg)) ;; modeline
+    (mode-line-inactive (:foreground oxocarbon-fg :background oxocarbon-bg))
 
-    (line-number-current-line (:foreground oxocarbon-base04 :background oxocarbon-base00))
-    (line-number (:foreground oxocarbon-base02))
-    
-    ;;(cursor (:background oxocarbon-base09))
-    ;; (parenthesis (:foreground))
+    (line-number-current-line (:foreground oxocarbon-base04 :background oxocarbon-base00)) ;; the current line num
+    (line-number (:foreground oxocarbon-base02)) ;; line numbers
+
+    (show-paren-match (:background oxocarbon-base02))
+    ;;(parenthesis (:background oxocarbon-base02))
     ;; END ;;
      )
-
-    ;; Forms after the face specifications are evaluated.
-    ;; (palette vars can be used, read below for details.)
-   
-   
-    ;; (custom-theme-set-variables 'oxocarbon
-    ;;    `(ansi-color-names-vector [,oxocarbon-base00 
-    ;; 				  ,oxocarbon-base01
-    ;; 				  ,oxocarbon-base02
-    ;; 				  ,oxocarbon-base03 
-    ;; 				  ,oxocarbon-base04
-    ;; 				  ,oxocarbon-base05 
-    ;; 				  ,oxocarbon-base06
-    ;; 				  ,oxocarbon-base07
-    ;; 				  ,oxocarbon-base08
-    ;; 				  ,oxocarbon-base09 
-    ;; 				  ,oxocarbon-base10
-    ;; 				  ,oxocarbon-base11
-    ;; 				  ,oxocarbon-base12
-    ;; 				  ,oxocarbon-base13
-    ;; 				  ,oxocarbon-base14
-    ;; 				  ,oxocarbon-base15
-
-    ;; 				  ]))
 
     )
 
