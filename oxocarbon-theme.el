@@ -1,4 +1,4 @@
-(autothemer-deftheme oxocarbon "A port of oxocarbon.nvim"
+(autothemer-deftheme oxocarbon "A port of oxocarbon"
 
   ;; Specify the color classes used by the theme
   ((((class color) (min-colors #xFFFFFF))
@@ -30,7 +30,9 @@
     ;; Simpler than deftheme, just specify a face name and 
     ;; a plist of face definitions (nested for :underline, :box etc.)
    (
-    (default (:foreground oxocarbon-fg :background oxocarbon-bg)) ;; (and backgroud foreground)
+    (default (:foreground oxocarbon-fg :background oxocarbon-bg)) ;; background and foreground
+    (button (:foreground oxocarbon-fg :background oxocarbon-base01))
+    ;; (counsel--mark-ring-highlight)
 
     ;; Programming ;;
     (font-lock-string-face (:foreground oxocarbon-base14)) ;; strings
@@ -46,13 +48,11 @@
     
     (corfu-current (:background oxocarbon-base02 :foreground oxocarbon-base08))
     
-    ;;(font-lock-operator-face (:foreground nightfox-green))
     ;; END ;;
 
     ;; General ;;
     (error (:foreground oxocarbon-base10))
     (warning (:foreground oxocarbon-base13))
-    ;;(info (:foreground nightfox-blue))
     ;; END ;;
 
     ;; UI ;;
@@ -65,11 +65,46 @@
     (line-number-current-line (:foreground oxocarbon-base04 :background oxocarbon-base00)) ;; the current line num
     (line-number (:foreground oxocarbon-base02)) ;; line numbers
 
-    (show-paren-match (:background oxocarbon-base02))
-    ;;(parenthesis (:background oxocarbon-base02))
-    ;; END ;;
-     )
+    ;; parens
+    (show-paren-match (:background oxocarbon-base02)) ;; matching parens
+    (show-paren-mismatch (:background oxocarbon-base11)) ;; mismatching parens
 
+    ;; isearch
+    (isearch-fail (:background oxocarbon-base10))
+
+    ;; ivy
+    (ivy-current-match (:background oxocarbon-base02 :foreground oxocarbon-base08))
+    (ivy-minibuffer-match-face-1 (:foreground oxocarbon-base08))
+    (ivy-minibuffer-match-face-2 (:foreground oxocarbon-base08))
+    (ivy-minibuffer-match-face-3 (:foreground oxocarbon-base08))
+    (ivy-minibuffer-match-face-4 (:foreground oxocarbon-base08))
+    ;; END ;;
+
+    
+    )
+
+
+   ;; (custom-theme-set-variables 'oxocarbon
+   ;;      `(ansi-color-names-vector [
+   ;; 				   ,oxocarbon-base00
+   ;; 				   ,oxocarbon-base01
+   ;; 				   ,oxocarbon-base02
+   ;; 				   ,oxocarbon-base03
+   ;; 				   ,oxocarbon-base04
+   ;; 				   ,oxocarbon-base05
+   ;; 				   ,oxocarbon-base06
+   ;; 				   ,oxocarbon-base07
+   ;; 				   ,oxocarbon-base08
+   ;; 				   ,oxocarbon-base09
+   ;; 				   ,oxocarbon-base10
+   ;; 				   ,oxocarbon-base11
+   ;; 				   ,oxocarbon-base12
+   ;; 				   ,oxocarbon-base13
+   ;; 				   ,oxocarbon-base14
+   ;; 				   ,oxocarbon-base15
+   ;; 				   ]))
+   
+   
     )
 
 (provide-theme 'oxocarbon) ;; theme ends here
