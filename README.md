@@ -1,5 +1,5 @@
 # oxocarbon-theme.el
-Port of oxocarbon.nvim theme.
+Port of oxocarbon theme.
 
 # Dependencies
 [autothemer](https://github.com/jasonm23/autothemer)
